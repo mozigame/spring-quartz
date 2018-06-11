@@ -17,7 +17,6 @@ public class ParseCronJob implements Job {
     private static Logger logger = LoggerFactory.getLogger(ParseCronJob.class);
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        logger.info("---->>>>>>here is cron job,");
-        System.out.println("---->>>>>>here is cron job, " + context.getFireInstanceId());
+        logger.info("---->>>>>>here is cron job, jobName:{}, instanceId:{}", context.getResult(), context.getJobInstance());
     }
 }
